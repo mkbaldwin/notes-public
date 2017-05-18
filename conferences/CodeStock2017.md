@@ -1,5 +1,8 @@
 # CodeStock 2017
 
+ * May 5 - 6, 2017 
+ * Knoxville Convention Center
+
 ## Day 1 (5/5/2017)
 
 ### Keynote: The Silver Bullet Syndrome
