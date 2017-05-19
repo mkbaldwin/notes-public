@@ -191,7 +191,7 @@ KanBan
     * Great CSS Management
     * TypeScript
 
-### Session2: Cross platform apps with Electron
+### Session 2: Cross platform apps with Electron
 
 David Neal
 
@@ -342,7 +342,7 @@ David Neal
     * Naming things
     * Off-by-one errors
 
-### Session3: Lightning Talks
+### Session 3: Lightning Talks
 
 #### Talk: ???
 
@@ -365,3 +365,54 @@ David Neal
   * Start with Why
     * Why to use something is more important than examples
   * Show & Tell - Dan Roam
+
+### Session 4: Building Secure Apps from the Ground Up
+
+Jared Smith (@JaredTheCoder)
+
+  * informationisbeautiful.net
+  * Compromise is inevitable
+    * We all make mistakes
+    * Non public unknown bugs
+    * probably won't know you've been breached for a long time
+  * Security Domains
+    * Web
+    * Networks
+    * Mobile
+    * Vehicle
+    * IoT
+    * Embedded
+  * Security through obscurity - False Security
+  * Security by default (by design)
+    * Think about how you could be attacked
+      * Think like a hacker
+    * Design from the ground up with security in mind
+    * Have a security team
+      * Even if one person
+    * Never Do:
+      * Missing authentication on checkout
+      * No hard coded password / credentials to version control
+      * Sending sensitive data without end-to-end encryption
+    * Attacking is a process
+      * Reconnaissance
+      * Develop vulnerability hypothesis
+      * Test vulnerability hypothesis
+      * Develop exploit
+      * Profit?
+
+### Session 5: Eloquent Code
+
+  * SOLID
+  * Single responsibility principle
+    * each class should do one thing
+  * Interface segregation principle
+    * No client should be forced to...
+  * Dependency Inversion
+    * Rely on interfaces not concrete implementations
+  * Write code to be read by humans
+  * Write more declarative code
+  * Don't make me execute code
+    * I'm a bad computer
+  * Don't copy code -> Think
+  * Use informative names
+    * Naming is hard. Don't get stuck.
