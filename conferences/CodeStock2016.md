@@ -45,3 +45,48 @@ Joe Kunk
 ### Session 2: Responsive Frameworks Fine Print
 
 Aaron Ladage (@aladage)
+
+ * It took 3 years from the iPhone release to the advent of responsive
+   * new learning curve
+   * can't test all sizes
+   * how to design for it?
+   * performance is important for mobile
+ * JQuery Mobile
+ * Zurb (Zerb?)
+ * Sencha
+ * Ionic
+ * Bootstrap - 2011
+   * Built by twitter for use on internal Tools
+ * Frameworks do ... well:
+   * make getting started easier
+   * rapid prototyping
+   * consistent design language / coding style
+   * provides a grid for you
+ * The Bad:
+   * Websites can look alike
+     * customize defaults
+   * The right tool for the job
+     * Lots of stuff included might not be needed
+     * Strip out what you don't need
+   * Performance is key
+     * 250ms slower/faster is the competitive advantage - Microsoft
+     * Minify
+     * Combine into one file
+     * Don't override default styles, recompile from less
+   * What happens if you redesign?
+     * Bootstrap markup is all tied to visual layout
+   * What if the framework changes?
+     * Bootstrap has already done this with V3 and with some V4 stuff.
+   * Leverage the preprocessor to create symantic markup that extends the Bootstrap classes
+     * eg
+     ```
+       .article {
+         @extend :col-xs-12
+       }
+     ```
+   * Makes upgrading / moving away Easier
+   * Be Framework Agnostic
+
+### Session 3: Skipped for IOT Workshop
+
+Losant IOT Platform
