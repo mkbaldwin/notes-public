@@ -194,3 +194,82 @@ Andrew May
   * Pay attention to backpressure
   * Think functional
   * github.com/AMCodeTankLabs
+  
+## Session 5: How to have code reviews developers actually want
+
+Cameron Presley (pcameronpresley)
+
+  * > Learn from those that came before you
+  * Why do code reviews?
+    * Cheaper to fix bugs sooner
+    * Reduce risk for company
+    * Show how others solve problems
+  * Book: Code Complete
+  * Common Mistakes
+    * Reviewing too much?
+      * How much is too much?
+      * Best Practices for code review : IBM
+        * Good report updated anually
+      * Break down the work and have more code reviews
+  * The 30% review -> reviewing before done will help make sure the approach is good
+  * If you have a suggestion back it up with facts
+  * Avoid Attacking the Developer
+    * Re-enforce joint ownership of the code. Use "What should we do..." vs "What should you do..."
+    * Code is the problem
+  * What should a good code review look like?
+    * Tight collaboration
+    * Fact based discussions
+    * Sharing information
+    * Finding Bugs
+  * Hard to classify "good" code and not be solely opinion based.
+  * One developer should not be solely responsible for a part of an app
+    * The Bus Factor
+  * What to look at:
+    * Quality
+    * Readability
+    * Maintainability
+    * Style
+  * Quality
+    * Does it do what it should?
+    * Edge cases?
+    * How are errors handled?
+  * Readability
+    * Clear code is better than clever
+    * Easy to understand?
+  * Maintainability
+    * Code always changes
+    * The longer it takes to change...
+      * the more expensive
+      * mistakes are more likely
+  * Style
+    * Naming Conventions
+    * Proper use of code constructs
+    * Project Structure
+    * Is it idiomatic?
+  * How the speaker does code reviews
+  * For Features
+    * Framing : Understanding the need
+      * Teaches devs the business
+      * Helps with ubiquitous language
+    * Inspection
+      * Does the architecture make sense
+      * Is it maintainable
+      * Are unit tests well written
+    * Verification
+      * try out the feature
+      * Keep an eye out for steps that don't make sense
+      * Do we have tests to cover the new functionality
+  * For Bugs
+    * What is the problem?
+    * Can we consistently reproduce the error?
+    * Have we found the root cause?
+    * Walk through
+      * Top down
+        * Start at the top and work down to where the problem was found.
+      * Bottom Up
+        * Start at the problem and work back up
+    * Special focus
+      * Is there anything the developer wants special focus on?
+      * Asking for help is not a weakness
+  * Book : The Clean Coder - Robert Martin
+  * Blog Post : Brainstorming about code reviews 0 Geoff Mazeroff
