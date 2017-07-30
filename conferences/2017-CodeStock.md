@@ -1,9 +1,11 @@
 # CodeStock 2017
 
- * May 5 - 6, 2017 
+ * May 5 - 6, 2017
  * Knoxville Convention Center
 
 ## Day 1 (5/5/2017)
+
+CodeStock Intro Video: https://www.youtube.com/watch?v=LRlpdixO9lQ
 
 ### Keynote: The Silver Bullet Syndrome
 Hadi Hariri (@hhariri)
@@ -19,8 +21,8 @@ Jeremy Clark (@JeremyBytes)
 
 Phone = "Magic device" - Creates a "force field" and people won't talk to you.
 
-Introvert - derive energy internally
-Extrovert - derive energy externally (from others)
+ * Introvert - derive energy internally
+ * Extrovert - derive energy externally (from others)
 
 Not related to being shy or outgoing.
 
@@ -34,6 +36,7 @@ Fear...
  * of failure
 
 Steps:
+
   0. Spot a conversation
   1. Join the circle (listening)
   2. Exploratory Comment
