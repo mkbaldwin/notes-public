@@ -273,3 +273,97 @@ Cameron Presley (pcameronpresley)
       * Asking for help is not a weakness
   * Book : The Clean Coder - Robert Martin
   * Blog Post : Brainstorming about code reviews 0 Geoff Mazeroff
+  
+## Session 6: Getting started with redux
+
+Jeremy Fairbank
+
+  * The wild west of state
+    * State is anywhere and anyone can change it.
+  * Redux
+    * Predictable State container
+      * All application state in one place
+      * Predictable - state changes in one place
+      * Changes in well defined ways
+    * Actions -> Token/descriptors that describe an operation
+    * Reducer -> Returns a new state from current state and an action.
+      * Unhandled actions ignored
+    * Decouple event from state change
+  * Redux Store
+    * Handle dispatching actions to the reducer
+    * Notify subscribers of state change
+  * Action Creators
+    * Functions that create actions
+  * Bound Action Creators
+    * Automatically dispatch when action is called.
+  * Redux is often associated with React (react-redux) library
+  * *Action -> Reducer -> State -> React Redux -> React -> Action*
+  * Data always flows in one direction
+  * Immutable Object State
+  * `{...state, counter: state.counter + 1}`
+    * Object spread operator
+    * New JS feature. Could also use lodash or other helpers.
+  * Reducer Composition
+    * Multiple Reducers
+    * Single root reducer
+    * Manages multiple child reducers
+    * Combine reducers
+  * Interacting with APIs
+    * Middleware
+      * Logging
+      * Debugging
+      * APIs
+    * Between Actions and the Reducers
+      * `applyMiddleware()`
+    * Libraries
+      * redux-logic
+      * redux-saga
+      * redux-observable
+  * Testing
+    * Unit tests for reducers are easy to write
+    * Action creators are possible to test but not really required
+    * Unit test with test doubles
+    * Use integration tests
+    
+## Closing Keynote: David's Guide for the reluctant leader
+
+David Neal
+
+  * > Regardless of the technology you use or your job title you have the ability to make an impact
+    * Paraphrased Quote...
+  * Negotiation
+    * Research
+    * BATNA - Best alternative to negotiated agreement
+    * Anchoring - Person making the first move has an advantage usually
+    * Not just a workplace skill
+  * 3 Virtues the ideal team player must possess
+    * Humility
+      * CS Lewis - Humility is not thinking less of yourself but thinking of yourself less
+    * Hungry
+      * Manageable/Sustainable Motivation
+    * Smart
+      * Common Sense/People Smart
+  * Our industry attracts peopel with less people skills
+  * DISC - Behavior Assessment Tool
+  * Strengths Finger -> Tom Rath
+  * Focus on your strengths.
+    * Will be more engaged at work
+  * Multitasking
+    * No one is good at it
+  * > A highway at 100% utilization is a parking lot.
+    * True for people too
+  * Too many tasks
+    * Brains become overloaded
+    * Paralyzed by indecision
+  * Focusing on one thing at a time is more productive
+  * > Meaningless and pointless work is soul crushing
+  * Old Motto
+    * > Life is too short to work somewhere that stinks.
+    * Have you done everything you can do?
+    * If you left would you have any regrets?
+  * New Motto
+    * > Life is too short to let things stay the way they are
+    * Look beyond flaws
+    * Freedom to fail
+    * Keep trying
+  * > There is no shortcut to success
