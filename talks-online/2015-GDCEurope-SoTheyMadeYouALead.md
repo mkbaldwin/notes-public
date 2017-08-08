@@ -1,5 +1,6 @@
-# [So they made you a lead, now what?](https://www.youtube.com/watch?v=Z98rF3bllao)
+# So they made you a lead, now what?
 
+[Video Link (YouTube)](https://www.youtube.com/watch?v=Z98rF3bllao)
 Presented at **GDC Europe 2015** by **Oliver Franzke**
 
   * Build trust
