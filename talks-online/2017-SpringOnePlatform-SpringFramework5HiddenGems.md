@@ -1,7 +1,7 @@
 # Spring Framework 5: Hidden Gems
 
 [Video Link (YouTube)](https://www.youtube.com/watch?v=Oytwjf7Al8c)
-Presented at **Spring One Platform** by **Juergen Hoeller**
+Presented at **SpringOne Platform 2017** by **Juergen Hoeller**
 
   * Spring 4.3 was an early backport release of many features planned for 5.0 release.
   * Logging
