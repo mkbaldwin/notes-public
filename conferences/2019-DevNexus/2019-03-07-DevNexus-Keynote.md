@@ -3,7 +3,7 @@
   * March 7, 2019
   * Atlanta, GA
 
-## Day 1
+## Day 1 
 
 ### KeyNote: Mixed Paradigms - The Method to Madness
 
