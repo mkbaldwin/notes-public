@@ -14,5 +14,5 @@ Live demo of some microservices and setting up Spring Security
     * `@EnableReactiveMethodSecurity`
     * `@PostAuthorize("returnObject?.to == principal?.claims['user_id']")` annotation applied to the repository paths
       * Only allows the requested message to be returned if the "to" contained the user's id. Can be used to prevent access based on the data being returned.
-    
+  * Spring security has support for Mock MVC for unit testing as well as spring web test client.
   
