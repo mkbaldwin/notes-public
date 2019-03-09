@@ -44,7 +44,7 @@ Venkat Subramaniam / Josh Long
   * Extension Functions
     * Add functionality to existing classes without extension
     * Open for extension, closed for modification
-    > fun String.shout() = toUpperCase()
+    * `fun String.shout() = toUpperCase()`
     * When translated to the JVM bytecode these are static methods that receive the target object as a parameter.
     * Can still use these in Java, but they are accessed as static methods
   * Nullable Types

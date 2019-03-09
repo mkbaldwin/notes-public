@@ -3,7 +3,7 @@
 Mary Grygleski / @mgrygles / IBM
 
   * A gentle introduction to reactive programming
-  * Reacvive Principles
+  * Reactive Principles
     * Responsive
     * Resilient
     * Elastic

@@ -30,27 +30,27 @@ Andres Almiray / @aalmiray / andresalmiray.com / Java Champion
           * Much like arrays in other languages
     * Functions
       * Defined using `func` keyword
-```Go
-fun foo(n int) int {
-  return n
-}
-```
+        ```Go
+        fun foo(n int) int {
+          return n
+        }
+        ```
       * Functions can return multiple values
-```Go
-fun foo() (String, int) {
-  return "ok", 1
-}
-```
+        ```Go
+        fun foo() (String, int) {
+          return "ok", 1
+        }
+        ```
       * Functions can passed like variables (similar to lambda expressions), but in Go it is not considered a good practice.
       * Functions can be associated with types
     * There are no classes in Go
     * There is struct
-```Go
-type Person struct {
-  name string
-  age int
-}
-```
+      ```Go
+      type Person struct {
+        name string
+        age int
+      }
+      ```
       * No need to define constructors
       * `p1 := Person{"Duke", 23}`
       * `p2 := Person{name: "Someone", age: 1}`

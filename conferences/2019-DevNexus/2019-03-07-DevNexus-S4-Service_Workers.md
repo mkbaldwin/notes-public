@@ -16,7 +16,7 @@ Jennifer Bland
       * Request will come in and the worker can check the cache. 
       * When not found in the cache reach out to a service on the network.
       * New response will then be cached      
-  * Workg on HTTPS only, or localhost
+  * WorkS on HTTPS only, or localhost
   * Has controlled scopes
   * Runs in the background in a separate thread
   * Only one service worker is active at a time
