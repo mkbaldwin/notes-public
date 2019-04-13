@@ -7,7 +7,7 @@ Graeme Rocher
     * Even Android
   * No runtime proxying
     * All dynamic class loading removed in 1.1
-  * Why micronaut? Why now?
+  * Why Micronaut? Why now?
     * Low memory
     * Fast startup
   * Java's problems
@@ -16,7 +16,7 @@ Graeme Rocher
   * GraalVM
     * New universal virtual machine (ORACLE)
     * native-imate tool
-    * Work well with micronaut
+    * Work well with Micronaut
     * Still experimental and evolving fast
   * Micronaut supports multiple JVM languages
     * Java
@@ -57,7 +57,7 @@ Graeme Rocher
     * `MethodInterceptor`
     * Around advice
     * Introduction advice
-      * How micronaut HTTP client works
+      * How Micronaut HTTP client works
   * Micronaut does not modify the bytecode of your classes 
     * unlike things like Lombok
     * Can still be used with Lombok (lombok annotation processor needs to come first)
