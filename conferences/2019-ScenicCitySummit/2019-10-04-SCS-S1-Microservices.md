@@ -46,3 +46,4 @@ Francis Solomon
     * Coupling between microservices is bad (e.g. lots of REST calls)
     * Allowing asynchronous calls and eventual consistency helps
       * Different way of thinking about the problem
+    * Have a strategy for dealing with failures (they will happen)
