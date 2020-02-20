@@ -47,4 +47,6 @@ Justin Lee, RedHat - @evanchooly
     * Support live reloading
     * No server restart
     * Watches code files for changes and automatically recompiles
-    
+  * Spring Extension
+    * Allows you to use code with Spring annotations
+    * Makes easier migration
