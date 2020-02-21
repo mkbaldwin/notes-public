@@ -1,4 +1,4 @@
-# DevNexus 2020
+# DevNexus 2020 - Day 1
 
 February 20, 2020 - Atlanta, GA
 
