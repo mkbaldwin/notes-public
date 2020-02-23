@@ -1,6 +1,6 @@
 # Session 1: Reactive Revolution
 
-Josh Long @starbuxman
+Josh Long, Pivotal/VMWare - @starbuxman
 
   * Bootiful Podcast
   

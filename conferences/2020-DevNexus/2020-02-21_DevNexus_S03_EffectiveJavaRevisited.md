@@ -1,6 +1,6 @@
 # Revisiting Effective Java in 2020
 
-Edson Yanaga
+Edson Yanaga, Red Hat - @yanaga
 
   * Factory Methods
     * e.g. `public static PhoneNumber of(int areaCode, int number)`

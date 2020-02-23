@@ -2,7 +2,7 @@
 
 ## Keynote 2 - Quantum Computing
 
-Jessica Pointing
+Jessica Pointing, Stanford - @jessicapointing
 
   * Quantum Physics
   * Quantum computer uses the behaviors of quantum physics to do computation.

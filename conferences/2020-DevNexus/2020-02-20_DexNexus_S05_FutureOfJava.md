@@ -1,11 +1,11 @@
 # Session 5: Future of Java
 
 Panelists:
-  * Sebastian Daschner
-  * Caitlin Mahoney
-  * Venkat Subramaniam
-  * Dalia Abo Sheasha
-  * Mark Heckler
+  * Sebastian Daschner, IBM - @DaschnerS
+  * Caitlin Mahoney, Slalom Consulting - @caitmm43
+  * Venkat Subramaniam, Agile Developer Inc. - @venkat_s
+  * Dalia Abo Sheasha, IBM - @DaliaShea
+  * Mark Heckler, Pivotal/VMware - @mkheck
 
 ## Is Java still relevant?
   * Short answer, yes.

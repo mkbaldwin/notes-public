@@ -1,5 +1,7 @@
 # Jakarta Messaging Service 3.0
 
+David Blevins, Tomitribe - @dblevins
+
   * JMS 2.0 May 2013
     * New builder interfaces (programatic improvements)
   * JMS 3.?

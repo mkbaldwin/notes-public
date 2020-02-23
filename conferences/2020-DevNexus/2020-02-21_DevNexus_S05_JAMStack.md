@@ -1,6 +1,6 @@
 # JAM Stack - Web Apps at Lightning Speed
 
-David Neal
+David Neal, Okta - @reverentgeek
 
   * https://bit.ly/jamtalk
   * Term coined by Netlify

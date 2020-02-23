@@ -1,6 +1,6 @@
 # Ahead of Time Data access with Micronaut
 
-Todd Sharp
+Todd Sharp, Oracle - @recursivecodes
 
   * Does compile-time rather than runtime processing
   * Import dependencies and add annotation processor in Gradle

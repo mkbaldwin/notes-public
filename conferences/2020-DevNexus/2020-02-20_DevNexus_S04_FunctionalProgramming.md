@@ -1,6 +1,6 @@
 # Session 4: Functional Programming in Groovy, Java, and Kotlin
 
-Kenneth Kousen / @kenkousin / kousenit.com
+Kenneth Kousen - @kenkousin / kousenit.com
 
   * Lambda Expression - Intended to be pure functions
   * Closure - Similar to lambda but can be dependent on scope
