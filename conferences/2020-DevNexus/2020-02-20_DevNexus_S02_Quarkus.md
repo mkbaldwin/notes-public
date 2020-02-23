@@ -1,7 +1,8 @@
 # Session 2: Quarkus - Becoming Supersonic
 
-Roberto Cortez, RedHat - @radcortez
-Justin Lee, RedHat - @evanchooly 
+  * Roberto Cortez, RedHat - @radcortez
+  * Justin Lee, RedHat - @evanchooly 
+
 
   * Opinionated framework for writing Java microservices
   * Why Quarkus?

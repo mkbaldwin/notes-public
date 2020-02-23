@@ -1,6 +1,6 @@
 # Structured Introduction to Kotlin Coroutines
 
-Roman Elizarov
+Roman Elizarov (JetBrains)
 
   * Coroutines are an old concept
   * First introducted in Simula'67
