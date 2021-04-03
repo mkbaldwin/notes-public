@@ -9,8 +9,11 @@ typos/grammatical errors throughout.
 
 ## Directories
 
-  * ***conferences*** -> Notes taken at conference that I have attended in person.
-  * ***talks-online*** -> Notes taken from talks that I have watched online.
+  * ***[conferences](conferences)*** -> Notes taken at conference that I have attended in person.
+  * ***[meetups](meetups)*** -> Notes from local meetups.
+  * ***[misc](misc)*** -> Miscellaneous Notes
+  * ***[Pluralsight](pluralsight)*** -> Notes from courses completed on Pluralsight.
+  * ***[talks-online](talks-online)*** -> Notes taken from talks that I have watched online.
 
 
 ## License
