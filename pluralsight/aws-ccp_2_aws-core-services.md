@@ -154,4 +154,136 @@
 
 ## File Storage Services
 
+### Amazon Simple Storage Service (S3)
+  * Stores files as objects in buckets
+  * Store across multiple AZs
+  * Enables URL access for files
+  * Rules for data life cycle
+  * Non-archival storage classes
+    * S3 Standard
+    * S3 Intelligent Tiering
+      * Automatically moves between frequent & infrequent based on access
+    * S3 Standard-IA
+      * Infrequent access, same resiliance, multiple AZs
+    * S3 OneZone-IA
+      * Infrequent access, only in one AZ
+  * Lifecycle policies
+    * Move to different storage class bsaed on time
+    * delete by age
+    * Can be vased on version -- S3 supports versioning
+  * S3 Transfer Acceleration
+    * Speeds up data upload using cloud front end points
+
+
+### S3 Glacier
+  * Archiving of data within S3
+  * Need to retain, but don't need to get as fast
+  * Configurable Retrieval Time
+  * Can put files in directly or via lifecycle rules
+  * Two Classes
+    * Glacier
+      * Minimum storage time of 90 days
+      * Retrieval in minutes or hours (different cost)
+      * Pay per GB retrieved
+      * Storage is 5x cheaper than standard S3
+    * Glacier Deep Archive
+      * 180 day minimal storage duration
+      * Retrieval in hours
+      * Pay for retrieval
+      * Up to 23x cheaper than standard S3
+
+### Elastic Block Store (EBS)
+  * Persistent block storage for EC2
+  * Can scale to support petabytes of data & multiple volume types
+  * Enables redundancy within AZ
+  * Allows for snapshotting
+  * Offers Encryption
+  * Multiple Volume Types
+    * General Purpose SSD
+    * Provisioned IOPS SSD
+    * Throughput optimized HDD
+    * Cold HDD
+
+### Elastic file system (EFS)
+  * Fully managed NFS file system
+  * Stores over multiple AZs
+  * Designed for linux workloads
+  * Supports petabyte scale
+  * Two storage classes
+    * Standard
+    * Infrequent Access
+  * Use Case Example
+    * EC2 instances in two AZs
+
+### Amazon FSx
+  * Fully managed windows file system
+  * SMB Support
+  * NTFS
+  * AD Integration
+  * SSD for low latency
+
+### Data transfer with Snow Ball
+  * Physically move data
+
+| Snow Ball                                          | Snow Mobile                                 |
+| -------------------------------------------------- | ------------------------------------------- |
+| Petabyte Scale                                     | Exabyte Scale                               |
+| Device delivered by AWS, returned by local carrier | Shipping container brought to your location |
+| You connect to your network                        | AWS Connects to your network                |
+| Loaded into S3                                     | Loaded into S3                              |
+
 ## Database Services
+
+### Amazon Relational Database Service (RDS)
+  * Managed Service (provisioning, patching, backup/recovery)
+  * Supports deployments across multiple AZs
+  * Some platforms support read replicas
+  * Launch into VPC
+  * Two volume types
+    * General purpose SSD
+    * Provisioned IOPS SSD
+  * Supported Platforms
+    * MySQL
+    * PostgreSQL
+    * Oracle
+    * MariaDB
+    * Amazon Aurora
+      * MySQL / PostgreSQL compatible
+      * Built for the cloud
+  * Amazon Database Migration Service (DMS)
+    * One time or continual
+    * Supports many commercial and open source DBs
+
+
+### Amazon Dynamo DB
+  * Fully managed
+  * No SQL DB
+    * Key Value
+    * Document DB
+  * Extremely low latency
+  * Automatic Scaling
+  * In memory cache option
+  * Can handle more than 10 trillion requests/day. Peak of 20 million reqs/sec
+  * Use Cases
+    * Sacle w/o maintenance
+    * Serverless Architecture
+    * Need low latency
+    * Data model w/o blob storage
+
+### Amazon Elasticache
+  * Fully managed in memory data store
+  * Memcached
+  * Redis
+  * Low latency
+  * Enable scaling / replicas on demand
+  * Handles most use cases
+    * DB Cache
+    * Session Store
+
+### Amazon Red Shift
+  * Scalable Data Warehouse
+  * Petabyte Scale
+  * High performance disks and column storage
+  * Can be encrypted
+  * Isolation in VPC
+  
