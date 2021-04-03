@@ -12,7 +12,7 @@ typos/grammatical errors throughout.
   * ***[conferences](conferences)*** -> Notes taken at conference that I have attended in person.
   * ***[meetups](meetups)*** -> Notes from local meetups.
   * ***[misc](misc)*** -> Miscellaneous Notes
-  * ***[Pluralsight](pluralsight)*** -> Notes from courses completed on Pluralsight.
+  * ***[pluralsight](pluralsight)*** -> Notes from courses completed on Pluralsight.
   * ***[talks-online](talks-online)*** -> Notes taken from talks that I have watched online.
 
 
