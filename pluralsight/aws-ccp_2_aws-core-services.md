@@ -287,3 +287,135 @@
   * Can be encrypted
   * Isolation in VPC
   
+## App Integration Services
+
+### Simple Notification Service (SNS)
+
+  * Fully managed pub/sub messaging service
+  * Organize info into topics
+  * Integrate with other AWS Services
+  * Notifications
+    * SMS 
+    * Email
+    * Push
+  * If you are not listening when the message is published you will not receive it.
+
+```
+                                                 ┌──────────────┐
+                                  ┌─────────────▶│    Lambda    │
+                                  │              └──────────────┘
+                                  │                              
+ ┌──────────────┐         ┌──────────────┐       ┌──────────────┐
+ │ User Signup  │────────▶│  SNS Topic   │──────▶│  SQS Queue   │
+ └──────────────┘         └──────────────┘       └──────────────┘
+                                  │                              
+                                  │              ┌──────────────┐
+                                  └─────────────▶│    Email     │
+                                                 └──────────────┘
+```
+
+### Simple Queue Service (SQS)
+
+  * Fully managed message queue service
+  * Up to 256kb payload
+  * Allows messages to be stored up to 14 days
+  * Two types of queue
+    * Standard - order not guaranteed
+    * FIFO - order guaranteed
+  * Fan out (send to multiple places at once)
+  * Queues help the system be fault tolerent. Service can go down and we don't lose data.
+
+```
+                                      ┌───────────┐     ┌─────────────────┐
+                                      │ Analytics │     │Analytics Ingest │
+                          ┌──────────▶│   Queue   │────▶│Service (lambda) │
+                          │           └───────────┘     └─────────────────┘
+  ┌───────────┐     ┌───────────┐                                          
+  │User Order │────▶│ SNS Topic │                                          
+  └───────────┘     └───────────┘                                          
+                          │           ┌───────────┐     ┌─────────────────┐
+                          │           │Fulfillment│     │Order Fulfillment│
+                          └──────────▶│   Queue   │────▶│     Service     │
+                                      └───────────┘     └─────────────────┘
+```
+
+### AWS Step Functions
+
+  * Orchestration of workflows
+  * Fully managed service
+  * Serverless Architectures
+  * Can support complex workflows and includes error handling
+  * Charged per state transition and for other services used
+  * Amazon states language
+  * Itegrates with many AWS services (compute, messaging, database)
+
+## Management & Governance Services
+
+### AWS CloudTrail
+
+  * Log and monitor interactions across all AWS services
+  * Records into S3 bucket
+  * Logs in region where the events occur
+  * Best Practice: Should be turned on for every AWS account
+  * Use Cases
+    * Compliance
+    * Forensic Analysis
+    * Operational Analysis
+    * Troubleshooting
+
+### AWS Cloud Watch
+
+  * Metrics, logs, and alarms for infrastructure
+  * Monitoring and management service
+  * Collects logs (even from your app)
+  * Metrics and events from AWS services
+  * Alarms based on metrics
+  * Dashboards based on metrics
+
+### AWS Config
+
+  * Monitors and records configuration
+  * Configuration history for infrastructure
+  * Rules you can customize
+  * Can work with AWS organizations
+  * Remediation steps suggested
+
+### AWS Systems Manager
+
+  * Multiple tools to manage infrastructure
+  * Automation for common maintenance actions
+  * Secure way to access server using AWS credentials
+  * Store app parameters securely for operational use
+
+### AWS Cloud Formation
+
+  * Provision infrastructure based on templates
+  * No additional charge
+  * YAML or JSON templates
+  * Infrastructure as code
+  * Manage dependencies between resources
+  * Provides drift detection to find changes
+  * Allows building infrastructure for prod, test, dev identically
+
+### AWS OpsWorks
+
+  * Managed instances of chef / puppet
+  * Configured as code
+  * Works in hybrid cloud model
+  * Ops works for
+    * Chef Automate
+    * Puppet Enterprise
+  * Ops works stacks
+
+### AWS Organizations & Control Tower
+
+  * Organizations
+    * Manage multiple accounts under one master account
+    * Consolidated billing
+    * Centralized logging & security
+  * Control Tower
+    * Centralize user access across accounts
+    * User management based on templates
+    * Guardrails for accounts
+    * Dashboards 
+    * 
