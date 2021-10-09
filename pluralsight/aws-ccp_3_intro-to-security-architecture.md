@@ -176,7 +176,7 @@
 
 ### Integrating AI & Machine Learning
 
-## Amazon Rekognition
+#### Amazon Rekognition
 
   * Computer vision - image/video
   * Identify objects in images
@@ -184,15 +184,138 @@
   * Facial Anaysis
   * Custom labels for your business objects
 
-## Amazon Translate
+#### Amazon Translate
 
   * 54 Languages supported
   * Language identification  and translation
   * Realtime or batch
 
-## Amazon Transcribe
+#### Amazon Transcribe
 
   * Speech recognition
   * Special version for medical
   * 31 languages
 
+## Disaster Recovery on AWS
+
+  * Backup & Restore
+    * Backup data into S3
+    * In a DR event, spin up an entire new environment
+    * Longest recovery time
+    * Cheapest Cost
+  * Pilot Light
+    * Key components are kept running in cloud
+    * Reduce time over backup & restore
+    * Increased Cost
+    * Must be maineained
+  * Warm Standby 
+    * Scaled down version always running
+    * Can run on less capable infrastructure
+    * Even more cost
+  * Multi-site
+    * Full environment running all the time
+    * Most expensice
+    * Near seamless recovery process
+  * Choosing an approach
+    * Recovery time objective -> Time it takes to get fully back up and running
+    * Recovery point objective -> Amount of data loss in terms of time that is acceptable. 
+
+## Architecting on EC2
+
+  * Auto scaling groups
+    * Launch template defines instance config
+    * min/max/desired number of instances
+    * performs health checks
+      * You can customize these
+    * Works in one or more AZ within a region
+    * On-demand or spot instances
+
+```                                                                                                 
+                                  EC2 Auto                                                          
+                                Scaling Group                                                       
+                                      │                                                             
+                                      │                                                             
+┌─────────────────────────────────────┼─────────────────────────────────────────┐                   
+│ us-east-1                           │                                         │                   
+│                                     │                                         │                   
+│ ┌───────────────────────────────────┼──────────────────────────────────────┐  │                   
+│ │  VPC                              │                                      │  │                   
+│ │                                   │                                      │  │                   
+│ │   ┌─────────────────────────┐     │        ┌─────────────────────────┐   │  │                   
+│ │   │  AZ1                    │     ▼        │  AZ2                    │   │  │                   
+│ │   │ ┌───────────────────────┴──────────────┴─────────────────┐       │   │  │                   
+│ │   │ │     ┌───┐                                    ┌───┐     │       │   │  │                   
+│ │   │ │     │   │                                    │   │     │       │   │  │                   
+│ │   │ │     └───┘                                    └───┘     │       │   │  │                   
+│ │   │ └───────▲───────────────┬──────────────┬─────────▲───────┘       │   │  │                   
+│ │   │         │               │              │         │               │   │  │                   
+│ │   │ ┌───────┼───────────────┴──────────────┴─────────┼───────┐       │   │  │                   
+│ │   │ │       │                   ┌───┐                │       │       │   │  │       Application 
+│ │   │ │       └───────────────────│   │────────────────┘       │ ◀─────┼───┼──┼──────Load Balancer
+│ │   │ │                           └─▲─┘                        │       │   │  │                   
+│ │   │ └───────────────────────┬─────┼────────┬─────────────────┘       │   │  │                   
+│ │   │                         │     │        │                         │   │  │                   
+│ │   │                         │     │        │                         │   │  │                   
+│ │   │                         │     │        │                         │   │  │                   
+│ │   │                         │     │        │                         │   │  │                   
+│ │   └─────────────────────────┘     │        └─────────────────────────┘   │  │                   
+│ │                                 ┌─┴─┐                                    │  │                   
+│ └─────────────────────────────────┤   ├────────────────────────────────────┘  │                   
+│                         ┌────────▶└─▲─┘                                       │                   
+└─────────────────────────┼───────────┼─────────────────────────────────────────┘                   
+                          │           │                                                             
+        Internet          │           │                                                             
+         Gateway ─────────┘           │                                                             
+                                 US Traffic                                                         
+```       
+
+  * AWS Secrets Manager
+    * Securely manage passwords, certs, etc.
+    * Works natively with RDS, DocumentDB, RedShift
+      * Can automatically rotate credentials
+    * Fine grained access control
+  * Controlling access
+    * Security Groups
+      * Firewall for EC2 instance 
+      * Works at instance level
+      * VPC has default security group
+      * Outbound traffic allowed by default
+  * Network ACL
+    * Works at subnet level
+    * Default VPC allows all inbound/outbound
+    * Custom ACL by default denies all traffic
+  * AWS VPN
+    * Creates encrypted site-to-site VPN tunnel
+    * Client VPN
+  * AWS Shield
+    * DDoS Protection
+    * Ongoing Detection & Prevention
+    * Two service levels
+  * Amazon Macie
+    * Machine learning to analyze data stored in S3
+    * Enables dashboard / alerts about data access
+  * Amazon Inspector
+    * Scanning of EC2 instances
+    * Charged per instance per scan
+    * Host assessment & network reachability inspection
+  * Deploying Predefined Solutions
+    * AWS Service Catalog
+    * Organizational Service Catalog
+  * AWS Market Place
+    * Catalog of third-party solutions
+    * AMIs, cloud formation, etc.
+    * May have extra charge on top of AWS resources
+  * Developer Tools
+    * AWS Code Commit
+      * Managed GIT repositories on AWS
+      * Alternative to GitHub
+      * Integrates with IAM
+    * AWS Code Build
+      * Managed service for deploying your custom apps
+      * Deploy to EC2, far gate, lambda, on-prem
+    * AWS Code Pipeline
+      * Fully managed continuous delivery pipeline
+      * Automate Build, Deploy, Test
+    * AWS Code Star
+      * Workflow tool to automate the use of other developer services
+      * Only charged for other services used
