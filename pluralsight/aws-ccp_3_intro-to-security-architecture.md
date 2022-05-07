@@ -319,3 +319,10 @@
     * AWS Code Star
       * Workflow tool to automate the use of other developer services
       * Only charged for other services used
+
+## The Certification Exam
+
+  * Cloud Concepts - 26%
+  * Technology (AWS Services/Infrastructure) - 33%
+  * Security - 25%
+  * Billing / Pricing - 16%
