@@ -9,7 +9,7 @@
     * Expensive to Maintain
     * Own all security burden
   * Cloud benefits
-    * Capotal expense (up front) traded for variable monthly expense
+    * Capital expense (up front) traded for variable monthly expense
     * Benefit from economies of scale
     * Stop guessing capacity
     * Increased speed & agility
@@ -48,7 +48,7 @@ Infrastructure as         Platform as           Software as
     * One or more data centers
     * Each region has multiple AZs
     * Redundant power / networking
-    * 69 AZz
+    * 69 AZs
   * Highly available apps have no single point of failure
   * Region and zone naming
   * AZ Name:
