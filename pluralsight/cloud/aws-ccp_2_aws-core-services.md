@@ -146,7 +146,7 @@
   * Performance Improvements
     * Minimizes the distance from user to initial endpoint
     * Optimized by using AWS network instead of internet
-    * Superior fault tolerence than DNS resolution
+    * Superior fault tolerance than DNS resolution
   * Use Cases
     * Non HTTP protocol (UDP, VOIP, MQQT)
     * Need for static IP
@@ -265,7 +265,7 @@
   * In memory cache option
   * Can handle more than 10 trillion requests/day. Peak of 20 million reqs/sec
   * Use Cases
-    * Sacle w/o maintenance
+    * Scale w/o maintenance
     * Serverless Architecture
     * Need low latency
     * Data model w/o blob storage
