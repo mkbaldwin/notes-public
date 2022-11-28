@@ -31,16 +31,16 @@
   * Performance Efficiency
   * Cost Optimization
 
-### High-availability & Fault Tolerence
+### High-availability & Fault Tolerance
 
-  * Everything fails all of the time - CTO Amazon
+  * Everything fails all the time - CTO Amazon
   * Reliability on AWS
-    * Fault tolerence
+    * Fault tolerance
       * Being able to handle failure of app components
     * High Availability
       * Keep entire solution even if problems occur
       * Powered by most AWS services out of the box
-    * Solutions on EC2 must be destroyed to be fault tolerent
+    * Solutions on EC2 must be deployed to be fault-tolerant
     * Should leverage more than one AZ
     * Some services can help
       * SQS (Simple Queue Service)
@@ -181,7 +181,7 @@
   * Computer vision - image/video
   * Identify objects in images
   * Identify actions in video
-  * Facial Anaysis
+  * Facial Analysis
   * Custom labels for your business objects
 
 #### Amazon Translate
@@ -273,7 +273,7 @@
     * Securely manage passwords, certs, etc.
     * Works natively with RDS, DocumentDB, RedShift
       * Can automatically rotate credentials
-    * Fine grained access control
+    * Fine-grained access control
   * Controlling access
     * Security Groups
       * Firewall for EC2 instance 

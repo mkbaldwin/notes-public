@@ -33,7 +33,7 @@ Infrastructure as         Platform as           Software as
 ```
   * Deployment Models
     * Public Cloud - AWS, GCP, Azure
-    * Private Cloud - Cloud likfe features in a private data center
+    * Private Cloud - Cloud like features in a private data center
     * Hybrid - Using both public/private cloud together
 
 ## AWS Global Infrastructure
@@ -41,7 +41,7 @@ Infrastructure as         Platform as           Software as
   * AWS Regions
     * Specific geographic location
     * Cluster of data centers working together
-    * Currently 22 regions, 5 more announced
+    * Currently, 22 regions, 5 more announced
     * 4 public regions in the US
     * 2 GovCloud regions
   * Availability Zone (AZ)
@@ -88,7 +88,7 @@ us-east-2a
   * AWS Resource Tags
     * Metadata we attach to specific resources
     * Name / Optional Value
-    * Use casees include department, environment, or project
+    * Use cases include department, environment, or project
   * AWS Organizations
     * Allows for managing multiple accounts under a single master account
     * Provides consolidated billing for accounts with clean separation of costs between organizations
@@ -111,7 +111,7 @@ us-east-2a
       * Tied to one primary contact
       * Starts at $29/mo, tied to AWS resource usage.
       * General Guidance - 24 business hour response time
-      * System Impared - 12 business hour response time
+      * System Impaired - 12 business hour response time
     * Business Support
       * Includes all from developer level
       * Full set of trusted advisor checks
@@ -120,8 +120,8 @@ us-east-2a
       * 3rd party software support
       * Starts at $100/mo, tied to AWS resource usage.
       * General Guidance - 24 hour response time
-      * System Impared - 12 hour response time
-      * Production System Impared - 4 hour response time
+      * System Impaired - 12 hour response time
+      * Production System Impaired - 4 hour response time
       * Production System Down  - 1 hour response time
     * Enterprise Support
       * Includes all from business level
@@ -129,8 +129,8 @@ us-east-2a
       * Concierge support team
       * Starts at $15,000/mo
       * General Guidance - 24 hour response time
-      * System Impared - 12 hour response time
-      * Production System Impared - 4 hour response time
+      * System Impaired - 12 hour response time
+      * Production System Impaired - 4 hour response time
       * Production System Down  - 1 hour response time
       * Business-Critical System Down - 15 minute response time
   * Assistance for cloud workflows

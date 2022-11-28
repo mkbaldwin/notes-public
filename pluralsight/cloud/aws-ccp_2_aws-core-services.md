@@ -40,11 +40,11 @@
         * Compute, memory or storage optimized
         * Accelerated computing
   * Root device types
-    * Instance Store - Ephemerl storage physically attached to the host the server is running on
+    * Instance Store - Ephemeral storage physically attached to the host the server is running on
     * Elastic Block Store
       * Persistent block store that is separate from the EC2 instance
       * Most commonly used of the two
-  * Amason Machine Images (AMI)
+  * Amazon Machine Images (AMI)
     * Template for an EC2 instance including config, OS, data
     * AWS provides many
     * Can be shared across accounts / can make custom ones
@@ -81,7 +81,7 @@
   * Benefits
     * Low maintenance 
     * Auto scales
-    * Fauly Tolerent
+    * Fault-tolerant
     * Pay by usage
     * Serverless architecture
 
@@ -106,7 +106,7 @@
   * DNS Service
   * Global Service (no region selection)
   * Highly Available
-  * Global resource routing - route to closest server
+  * Global resource routing - route to the closest server
   * DNS changes are not instantaneous - takes time to propagate
   * Route 53 High Availability:
     * Can configure to have failover to route to a different server automatically if a server goes down
@@ -164,13 +164,13 @@
     * S3 Intelligent Tiering
       * Automatically moves between frequent & infrequent based on access
     * S3 Standard-IA
-      * Infrequent access, same resiliance, multiple AZs
+      * Infrequent access, same resilience, multiple AZs
     * S3 OneZone-IA
       * Infrequent access, only in one AZ
   * Lifecycle policies
-    * Move to different storage class bsaed on time
+    * Move to different storage class based on time
     * delete by age
-    * Can be vased on version -- S3 supports versioning
+    * Can be based on version -- S3 supports versioning
   * S3 Transfer Acceleration
     * Speeds up data upload using cloud front end points
 
@@ -318,12 +318,12 @@
 
   * Fully managed message queue service
   * Up to 256kb payload
-  * Allows messages to be stored up to 14 days
+  * Allow messages to be stored up to 14 days
   * Two types of queue
     * Standard - order not guaranteed
     * FIFO - order guaranteed
   * Fan out (send to multiple places at once)
-  * Queues help the system be fault tolerent. Service can go down and we don't lose data.
+  * Queues help the system be fault-tolerant. Service can go down, and we don't lose data.
 
 ```
                                       ┌───────────┐     ┌─────────────────┐
@@ -347,7 +347,7 @@
   * Can support complex workflows and includes error handling
   * Charged per state transition and for other services used
   * Amazon states language
-  * Itegrates with many AWS services (compute, messaging, database)
+  * Integrates with many AWS services (compute, messaging, database)
 
 ## Management & Governance Services
 
