@@ -1,5 +1,27 @@
 # AWS Cloud Overview / Review Notes
 
+## Fundamental Concepts
+
+### Benefits of Cloud
+
+  * **Cost Savings** - Trade fixed up front (capital) expenses for variable expenses paying only for what you use.
+  * **Agility** - The cloud gives you easy access to a wide range of technologies and lowers the cost of trying new things.
+  * **Elasticity** - Scale resources up or down easily based on need / usage.
+  * **Reliability** - Ability to provide functionality when needed.
+
+### AWS Global Infrastructure
+
+  * **Region** - A specific geographic location containing a number of data centers working together.
+  * **Availability Zone** - A cluster of one or more data centers within an AWS Region.
+  * **Edge Locations** - More than 200 global locations used to support CloudFront CDN and Route 53 DNS.  
+
+### Cost Estimation Tools
+
+  * **AWS Cost Explorer** - Interface for exploring your AWS costs broken down by Service and Cost Tag. Provides predictions
+                            for the next three months of cost and recommendations for cost optimization. 
+  * **AWS Budgets** - Plan and track usage across your AWS services. 
+  * **AWS TCO Calculator** - Enables determination of costs for leveraging cloud infrastructure.
+  * **AWS Simple Monthly Calculator** - Calculate costs of running specific AWS infrastructure. 
 
 ## AWS Cloud Services
 
@@ -71,6 +93,27 @@
                             under a single master account.
   * **AWS Control Tower** - Centralize user access and management across multiple accounts.
 
-### Next Service
+### Identity and User Management
 
-* **Service** - Desc
+* **AWS Identity and Access Management (IAM)** - Service for defining users and controlling access to AWS services. Performs
+                                                 authentication and authorization management (including multi-factor authentication).
+* **Amazon Cognito** - Manage authentication / authorization for your custom applications and provides a fully managed user 
+                       directory service. Enabled controlled access to AWS resources (e.g. S3 bucket) and works with enterprise
+                       IdPs (e.g. AD, SAML).
+
+### Data Processing Services
+* **AWS Glue** - Serverless extract, transform, and load (ETL) service for RDS, DynamoDB, RedShift, S3. 
+* **Amazon EMR** - Elastic map reduce service for big data processing (includes Spark, Flink, Hive, HBase, Hudi, and Presto support).
+* **AWS Data Pipeline** - Managed extract, transform, and load (ETL) service with data workflows.
+* **Amazon Athena** - Managed service for querying large scale data in S2 using standard SQL style queries.
+* **Amazon Quick Sight** - Managed business intelligence service and dynamic dashboards.
+* **Amazon Cloud Search** - Managed service that enables developers to build search capabilities into custom applications.
+* **Amazon Rekognition** - Computer vision image/video recognition used to identify object, actions, or perform facial recognition. 
+* **Amazon Translate** - Text translation service for 54 different languages.
+* **Amazon Transcribe** - Speech recognition / transcription for 31 different languages.
+
+### Developer Tools
+
+* **AWS CodeCommit** - Private Git repository hosting on AWS cloud.
+* **AWS CodeBuild** - CI tool that compiles code, runs test, and produces deployable software packages. 
+* **AWS CodePipeline** - Continuous delivery tool for building build/deployment pipelines. 
