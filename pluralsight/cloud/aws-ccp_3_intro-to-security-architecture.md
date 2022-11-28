@@ -207,14 +207,14 @@
     * Key components are kept running in cloud
     * Reduce time over backup & restore
     * Increased Cost
-    * Must be maineained
+    * Must be maintained
   * Warm Standby 
     * Scaled down version always running
     * Can run on less capable infrastructure
     * Even more cost
   * Multi-site
     * Full environment running all the time
-    * Most expensice
+    * Most expensive
     * Near seamless recovery process
   * Choosing an approach
     * Recovery time objective -> Time it takes to get fully back up and running
@@ -222,7 +222,7 @@
 
 ## Architecting on EC2
 
-  * Auto scaling groups
+  * Auto-scaling groups
     * Launch template defines instance config
     * min/max/desired number of instances
     * performs health checks
