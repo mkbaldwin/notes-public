@@ -46,15 +46,15 @@ Policy Types
   * **Inline Policy** - A policy that exists only where it is assigned to one user or group.
 
 Policy Concepts
+
   * Policies can be specific to an individual instance. For example, it is possible to define stop/start permissions for
 a specific EC2 instance rather than to all instances.
   * An explicit deny in a policy always overrides any other allows defined in the policy.
   * All permissions are implicitly denied until allowed by a policy.
 
 IAM Policy simulator
-  * Test the effects of IAM policies before committing to prod.
-  * Validate policies work as expected.
-  * Test policies applied to existing users (good for troubleshooting).
-  * https://policysim.aws.amazon.com
 
-
+* Test the effects of IAM policies before committing to prod.
+* Validate policies work as expected.
+* Test policies applied to existing users (good for troubleshooting).
+* https://policysim.aws.amazon.com
