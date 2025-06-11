@@ -80,4 +80,10 @@
    *  5-10 sec replication lag
    *  Can run analytics on redshift while ingesting data
    *  CDC - Change Data Capture
-   *  
+* Aurora Limitless Database
+  * Sharding challenges 
+    * re-sharding
+    * consistency
+  * Limitless does managed sharding and you don't have to worry about it
+  * Looks like the same cluster you are used to from the outside
+  * 
