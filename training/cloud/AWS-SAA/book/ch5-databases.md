@@ -84,4 +84,37 @@
 ## Nonrelational (NoSQL) Databases
 
 * Designed to consistently handle tens of thousands of transactions per second.
-* 
+* Optimized for unstructured data
+* Schemaless
+* Each record requires a primary key attribute that must be unique
+* Queries
+  * Optimized for querying based on primary key
+  * Queries against other attributes are slower
+* DB Types
+  * DynamoDB
+    * Handles thousands of read/write operations per second
+    * Speed accomplished by partitioning data
+    * Each partition is 10GB and backed by SSDs in multiple Availability Zones
+    * When you create a table you specify the primary key and data type
+      * Partition Key - (hash key) contains a single value
+      * Composite Key - Combination of two values
+      * Can also be a combination of a partition key and a sort/range key.
+    * Hot partition - partition seeing high read/write operations
+    * Data Types
+      * Scalar - contain only one type of value
+        * string - store up to 400KB of UTF-8 text
+        * number - store positive or negative numbers up to 38 significant digits
+        * binary - store up to 100KB of binary data in base-64 format
+        * boolean
+        * null - for unknown or undefined value
+      * Set - Unorderedd list of scalar values
+      * Document - Hold different types of data thart is not scalar or set, can be nested up to 32 levels deep.
+      * list - Ordered list of data of any type
+    * Modes
+      * On-demand - automatically scales to accomodate the workload 
+      * Provisioned 
+          * you specify the number of read/writes your application requires - provisioned throughput
+          * Read capacity units (RCU)
+          * Write Capacity Unitys (WCU)
+        * Auto scaling can be used to specify minimum and maximumn RCUs and WCUs
+  
