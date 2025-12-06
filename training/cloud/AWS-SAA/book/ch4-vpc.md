@@ -35,6 +35,8 @@
 * Subnets in a single VPC cannot overlap
 * Commonly the subnet's prefix length will be larger than the VPC CIDR to allow for IP addresses in other Availability Zones.
 
+**AWS specific rules:** The CIDR block prefix length must be at least `/16` and AWS will reserve 5 IP addresses out of each network for special use and they will not be usable to your application.
+
 ## Availability Zones
 
 * Subnets can only exist in one Availibility Zone.
