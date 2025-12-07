@@ -224,3 +224,42 @@ using Launch Templates
      A long polling request can take up to 20 seconds to return a response. 
      This is the cheaper option since you do not have to make as many 
      requests to the SQS service.
+
+## Designing For Availability
+
+* There is a proportional relationship between availability, complexity, and cost. 
+* Higher availability requires more resources which increases complexity and cost.
+* 99% availability
+  * About 3.5 days of downtime per year
+  * Downtime is an inconvenience, but not the end of the world.
+  * Example:
+    * Single EC2 instance, self-hosted SQL DB.
+    * Automatic backups to S3
+    * Use Route 53 health checks to monitor end points and route users to a static
+      error page in S3 or CloudFront when there is a failure.
+  * Routinely test the recovery procedures by creating a new instance and restoring the
+    backup from S3.
+  * 
+* 99.9% availability
+  * About 9 hours of downtime per year
+  * Downtime isn't the end of the world, but is pretty close.
+  * Example:
+    * Run instances of the application in multiple availability zones.
+    * Configure application load balancer (ALB) to proxy and load balance between instances.
+    * Create a launch template to install application services.
+    * Create an auto scaling group to keep two instances in each zone.
+    * Use a multi-AZ RDS instance for the database.
+  * Important consideration: When an entire availability zone fails your instances in the 
+    other zones need enough capacity to handle the extra traffic that was being handled
+    by the servers that have failed.
+  * Recovery for most failures can be automatic in this scenario by using auto scaling
+    groups with health checks enabled. Failed instances will automatically be removed
+    and new instances created.
+* 99.99% availability
+  * Mission-critical applications (often responsible for generating a lot of revenue or
+    are life-safety systems).
+  * Example:
+    * Deploy across availability zones in multiple regions to protect against regional
+      AWS failures.
+    * Use multi-AZ RDS deployment with a read replica in another regions (only for MariaDB 
+      or MySQL databases). 
