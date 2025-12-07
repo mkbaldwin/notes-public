@@ -7,7 +7,7 @@
     * Audit all environments for compliance.
     * Consolidated billing (replaces consolidated billing tool)
  * AWS Control Tower
-    * Extends functionality of AWS Organizations and allows creations of "landing zones".
+    * Extends the functionality of AWS Organizations and allows creations of "landing zones."
     * Landing zones streamline onboarding of new accounts and automatically apply your organization's governance policies.
     * Blueprints for security best practices.
  * AWS Service Catalog
@@ -15,7 +15,7 @@
     * Create a predefined set of resources via CloudFormation. 
  * AWS License Manager
     * Service that helps you manage software licenses. 
-    * Dashboard that allows tracking usage, monitor compliance, and enforcing rules. 
+    * Dashboard that allows tracking usage, monitoring compliance, and enforcing rules. 
     * No recurring cost.
  * AWS Artifact
     * Allows for downloading compliance related information about their AWS accounts.
@@ -23,7 +23,7 @@
  * AWS CLI
     * Run complex AWS operations from your local command line
  * AWS SDK
-    * Allows for incorperating AWS resources into custom application code.
+    * Allows for incorporating AWS resources into custom application code.
     * SDK available for multiple languages including Java, .NET, and Python.
 
 ## Migration Tools
@@ -34,7 +34,7 @@
  * AWS Application Migration Service
     * Automates testing and transfer of non-cloud application servers.
     * Useful in a lift-and-shift migration. 
-    * Install AWS replication on each server to be migrated and the agent performs the replication in the background. 
+    * Install AWS replication on each server to be migrated, and the agent performs the replication in the background. 
     * NOTE: CloudEndure would be used to migrate to GovCloud
  * AWS Database Migration Service
     * Performs migration of databases to the cloud.

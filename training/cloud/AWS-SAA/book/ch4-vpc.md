@@ -3,7 +3,7 @@
 * A VPC is a virtual network that can contain EC2 instances as well as other AWS resources
 * Every VPC is logically isolated from all other networks 
 * Connections to other VPCs, the internet, and your own network can be set up
-* VPC Exists only in one region and you can have multiple VPCs in your account
+* VPC Exists only in one region, and you can have multiple VPCs in your account
 
 ## CIDR Blocks
 
@@ -12,9 +12,9 @@
 * Primary CIDR block must be assigned when creating the VPC
 * Represented as an IP Prefix
   * /16 to /28
-  * The smaller the prefix the larger the number of IP addresses in the range
+  * The smaller the prefix, the larger the number of IP addresses in the range
   * IPv4 supports /0 to /32.
-  * You can use any range (RFC 1918) but it is recommended to use one of:
+  * You can use any range (RFC 1918), but it is recommended to use one of:
     * 10.0.0.0./8
     * 172.16.0.0/12
     * 192.168.0.0/16
@@ -33,14 +33,14 @@
   * 172.160.100.3.  - Reserved
   * 172.160.100.255 - Broadcast
 * Subnets in a single VPC cannot overlap
-* Commonly the subnet's prefix length will be larger than the VPC CIDR to allow for IP addresses in other Availability Zones.
+* Commonly, the subnet's prefix length will be larger than the VPC CIDR to allow for IP addresses in other Availability Zones.
 
 **AWS specific rules:** The CIDR block prefix length must be at least `/16` and AWS will reserve 5 IP addresses out of each network for special use and they will not be usable to your application.
 
 ## Availability Zones
 
-* Subnets can only exist in one Availibility Zone.
-* Resiliency can be achieved by deploying services in multiple availibility zones
+* Subnets can only exist in one Availability Zone.
+* Resiliency can be achieved by deploying services in multiple availability zones
   
 ## Elastic Network Interface
 
@@ -61,16 +61,16 @@
   ## Internet Gateway & Routing
 
 * Give the ability to obtain a public IP address, connect to the internet and receive requests from the internet. 
-* To use the internet gateway you must create a default route that points to the internet gateway as a router
+* To use the internet gateway, you must create a default route that points to the internet gateway as a router
 * Control of how traffic moves in and out of your VPC is done using routes stored in route tables
-* A route termines where traffic can move and consists of a desination IP prefix and a target resource
-* Desitination must be in IPv4 or IPv6 CIDR notation
+* A route determines where traffic can move and consists of a designation IP prefix and a target resource
+* Destination must be in IPv4 or IPv6 CIDR notation
 * The local route is the only mandatory route that exists in every route table
 * The default route
-  * To enable internet access from your instances you must create the default route
+  * To enable internet access from your instances, you must create the default route
     * Destination: 0.0.0.0/0 (ALL IP Addresses)
     * Target: Your internet gateway
-  * The router will route based on the most specific route first (closest match)
+  * The router will route based on the most specific route first (the closest match)
   
 ## Security Groups
 
@@ -105,7 +105,7 @@
 * Elastic IP addresses (EIPs)
   * Type of IP assigned to your IP when you request it.
   * You have exclusive use of the IP until you manually release it
-  * You must bind it to a speficic ENI
+  * You must bind it to a specific ENI
   * Can be moved between ENIs, but only assigned to one at any given time
   * AWS Global Accelerator
     * If you have resources in multiple regions managing EIPs managing routing can be cumbersome
@@ -120,7 +120,7 @@
         * Automatically scales
         * Can reside in only one subnet that must be public
         * Must create default route to direct internet bound traffic to the gateway
-        * Doesn't use an ENI so cannot have security group applied
+        * Doesn't use an ENI so cannot have a security group applied
       * NAT instance
         * EC2 instance using a preconfigured Linux-based AMI
         * Doesn't automatically scale
@@ -128,7 +128,7 @@
         * Can be used as a jump host (bastion) to access services that do not have public IPs
         * Must create default route to direct internet bound traffic to the NAT instance
         * Not easy to create resiliency
-      * These are useful when services need to access the internet (e.g. for updates), but do not need to be publicly accessible.
+      * These are useful when services need to access the internet (e.g., for updates), but do not need to be publicly accessible.
   
 ## Other Services
 
@@ -141,15 +141,15 @@
 * VPC Peering
   * Allows traffic to flow between VPCs
   * Only allows instance to instance communication 
-    * Cannot share thins like NAT devices
+    * Cannot share things like NAT devices
 * Hybrid cloud networking
   * Tools for making the cloud be an extension of your data center
   * AWS Site-to-Site VPN
-    * Configure a Virtual Private Gateway inside of AWS
+    * Configure a Virtual Private Gateway inside AWS
     * Configure your on-premise router
     * One VPN per VPC
   * AWS Transit Gateway
-    * Highly available service that allows connecting multiple VPCs on on premise networks
+    * Highly available service that allows connecting multiple VPCs on premise networks
     * Done dia Direct Connect links or VPNs
     * Route tables are used to control how traffic flows between networks
     * Black hole routes can be used to drop any traffic that matches the rule
@@ -169,7 +169,7 @@
     * Special type of ENA that supports TCP/IP
     * Allows HPC applications to use Libfabric to bypass host OS TCP/IP stack
     * Increased throughput and latency
-    * All instances must be in same subnet
+    * All instances must be in the same subnet
   * ParallelCluster
     * Automatically manage your Linux HPC cluster
     * Creates cluster instances and automatically creates a 15GB shared filesystem for them to use (based on EBS)

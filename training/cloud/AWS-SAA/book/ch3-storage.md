@@ -1,6 +1,6 @@
 # Storage
 
-# S3
+## S3
 
 * Organize files into buckets
 * Default allows 100 buckets per account
@@ -26,7 +26,7 @@
         * Response Status
 * Durability
     * Data in most S3 classes is automatically mirrored across 3 availability zones.
-    * 99.999999999% durability - i.e. if you store 10,000,000 objects you can expect to lose one object every 10,000 years.  
+    * 99.999999999% durability - i.e., if you store 10,000,000 objects, you can expect to lose one object every 10,000 years.  
 * Availability
     * S3 Standard - 99.99%
     * S3 Standard-IA - 99.9%
@@ -35,7 +35,7 @@
 * Data stored in S3 is eventually consistent across all three availability zones. Changes may not be reflected across all three immeidately. Delay is typically under 2 seconds.
 * By default saving an object to the same name overwrites the original content. Versioning can allow tracking changes to files.
 * Life Cycle Management
-    * In addition to S3 Intelligent-Tiering you can specify custom lifecycle rules for buckets.
+    * In addition to S3 Intelligent-Tiering, you can specify custom lifecycle rules for buckets.
 * Accessing S3 Objects
     * Buckets/objects are available by default to everything in your account, but not other accounts or visitors. 
     * Permissions can be managed using access control list (ACL) rules, S3 bucket policies, and IAM policies.
@@ -44,13 +44,13 @@
     * Static Website Hosting - S3 can be used to store HTML files for an entire static website. 
 * S3 Glacier
     * Encrypted by default
-    * Objects are given machine generated IDs instead of human readable names. 
-    * In Glaicier the term archive refers to a file that is uploaded. The term vault is used instead of bucket.
+    * Objects are given machine generated IDs instead of human-readable names. 
+    * In Glaicier, the term archive refers to a file that is uploaded. The term vault is used instead of bucket.
     * Classes:
         * Instant - Immediate availability of data.
         * Flexible - Longer time to retrieve data.
         * Deep Archive - Takes 12hrs to retrieve data.
-* Cost of S3 is determined by the storage amount and class. Additionally you are paying for data transfer.
+* Cost of S3 is determined by the storage amount and class. Additionally, you are paying for data transfer.
 
 ## Other Storage Services
 
@@ -70,4 +70,4 @@
 * AWS Snow Family - Physical devices for moving large quantities of data
 * AWS Data Sync
     * Quickly and securely move data from your data center into AWS.
-    * Transfer up to 10Gbps if your connection support that speed.
+    * Transfer up to 10Gbps if your connection supports that speed.
