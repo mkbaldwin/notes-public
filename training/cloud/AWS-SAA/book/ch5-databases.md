@@ -93,9 +93,9 @@
 * DB Types
   * DynamoDB
     * Handles thousands of read/write operations per second
-    * Speed accomplished by partitioning data
+    * Speed achieved by partitioning data
     * Each partition is 10GB and backed by SSDs in multiple Availability Zones
-    * When you create a table you specify the primary key and data type
+    * When you create a table, you specify the primary key and data type
       * Partition Key - (hash key) contains a single value
       * Composite Key - Combination of two values
       * Can also be a combination of a partition key and a sort/range key.
