@@ -35,3 +35,9 @@
        * S3 Interface Endpoint
          * Let's you write really granular policies
          * Driven by AWS PrivateLink
+ 
+ 
+ * AWS Systems Manager
+   * No inbound connections required into your EC2.
+   * Agent on instance (built into all AWS provided AMIs) polls the systems manager to see if it needs a connection. 
+   * Can logs all the buckets
