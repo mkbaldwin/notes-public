@@ -96,4 +96,63 @@
     Formation. NLBs also work for non HTTP/HTTPS TCP traffic. 
   * **Gateway Load Balancer** - For managing third-party virtual appliances 
     supporting the GENEVE protocol. Operates on the network layer (OSI Layer 3).
-  * 
+
+## Infrastructure Automation
+
+### CloudFormation
+
+* CloudFormation is the primary AWS tool for infrastructure automation. 
+* Allows specification of templates in JSON or YAML to define an inventory of 
+  AWS resources needed by an application.
+* **Stack** - A group of resources defined by a CloudFormation template. This 
+  can be used to automatically provision a set of resources.
+* Each resource must be given a logical ID (name) that must be unique within 
+  a template. 
+* The resulting instance that is created will have a physical ID.
+* Templates can be stored and read from an S3 bucket.
+* Stacks may be deleted via CLI or web console and this will delete all
+  resources defined in the template. 
+* Infrastructure can be defined in multiple stacks. Best practice is to
+  organize stacks by lifecycle and ownership.
+* **Nested Stacks** - CloudFormation stacks are AWS resources and therefore
+  you can configure a template (parent stack) to create additional nested 
+  stacks. 
+* **Output Values** - You can choose to have a stack generate output values
+  in order to share information with other templates within the same account.
+* **Change Set** - You can submit a template and create a change set to get a
+  list of every resource that will be added, removed, or modified.
+* **Stack Policy** - A stack policy can be defined when creating a stack to
+  prevent specific resources from being modified by a stack update. Stack
+  policies cannot be removed once created, but can be temporarily overridden.
+
+### Other Tools
+
+* Third party tools can also be used to for infrastructure automation scripts. 
+* AWS OpsWorks
+  * Allows you to build infrastructure controlled by Chef or Puppet.
+
+## Optimization
+
+* **Load Testing** - Submit your application and infrastructure to simulated
+  workloads and observe / monitor how it performs under stress. Ideally this
+  should be run against a test environment that is configured to run at 
+  production scale.
+* **Visualization** - CloudWatch Dashboards provides ways to view charts and
+  graphs of metrics. You can create multiple dashboards with desired information.
+* Caching
+  * If your application has lots of frequently accessed information from S3 or a
+    database solution a caching solution may increase performance. 
+  * Keeps a copy in system memory or in a purpose built cache database.
+  * **Amazon ElastiCache**
+    * Purpose built clustered cache database.
+    * Can use either Redis or Memcached database.
+    * Memcached - Easy to set up, but only stores blobs in a key-value database.
+    * Redis - More complex to set up but flexible allowing storage of strings, 
+      lists and sets.
+* Partitioning / Sharding
+  * Can be used when a single database instance is insufficient.
+  * Requires modifications to applications to route users to the appropriate
+    location for their data.
+* Compression
+  * Compression can be used to reduce the volume of data being stored or moved.
+  
