@@ -2,8 +2,7 @@
 
 ## Overview
 
-CIDR (Classless Inter-Domain Routing) is a method for allocating IP addresses and routing IP packets on the internet. It replaces the older class-based system (Class A, B, C) with a more flexible approach using prefix lengths. It is primarily used for IPv4 IP addresses.
-
+CIDR (Classless Inter-Domain Routing) 
 * IPv4 addresses are 32-bit numbers that are typically represented as four decimal octets separated by dots. Each octet is a number from 0 to 254 representing one byte of the IP address.
 * CIDR notation is of the format: IP/Prefix
   * The IP portion is the base address of the block. Usually this is an IP where the host bits will all be zero.
